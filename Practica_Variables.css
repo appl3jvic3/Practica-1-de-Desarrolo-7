@@ -1,0 +1,70 @@
+/* Practica_Variables.css */
+:root{
+  --bg:#0b1020;
+  --panel:#111a34;
+  --text:#e8ecff;
+  --muted:#aab3da;
+  --accent:#2ee59d;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 16px 44px rgba(0,0,0,.35);
+  --radius:14px;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background: radial-gradient(1000px 560px at 20% 0%, rgba(46,229,157,.22), transparent 60%),
+              linear-gradient(180deg, #070a14, var(--bg));
+  color:var(--text);
+  padding:28px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+body > *{ width:min(820px, 100%); }
+
+h1{
+  margin:0 0 6px;
+  font-size: clamp(26px, 4vw, 34px);
+  letter-spacing:.2px;
+}
+
+h2{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-weight:700;
+  font-size: clamp(18px, 2.4vw, 22px);
+}
+
+/* Estilo tipo “mensaje” para el texto que imprime PHP */
+body{
+  line-height:1.6;
+}
+
+body > br{ display:block; }
+
+/* Caja principal (se verá aunque el texto sea suelto) */
+h1 + *{
+  display:block;
+  padding:12px 14px;
+  margin:10px 0 8px;
+  background: rgba(17,26,52,.72);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Resaltar el final */
+h2:last-of-type{
+  color: rgba(46,229,157,.9);
+}
+
+/* Estilo para que se vea “limpio” */
+a{ color: var(--accent); }

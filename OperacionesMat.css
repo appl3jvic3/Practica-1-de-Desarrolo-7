@@ -1,0 +1,98 @@
+/* OperacionesMat.css */
+:root{
+  --bg:#0b1020;
+  --panel:#111a34;
+  --text:#e8ecff;
+  --muted:#b5bedf;
+  --accent:#ff7a59;
+  --accent2:#7c5cff;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 16px 44px rgba(0,0,0,.35);
+  --radius:14px;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background: radial-gradient(900px 500px at 10% 0%, rgba(255,122,89,.25), transparent 60%),
+              radial-gradient(900px 520px at 90% 10%, rgba(124,92,255,.25), transparent 60%),
+              linear-gradient(180deg, #070a14, var(--bg));
+  color:var(--text);
+  padding:28px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+body > *{ width:min(900px, 100%); }
+
+h1{
+  margin:0 0 14px;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing:.2px;
+}
+
+h2{
+  margin:18px 0 8px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  color:var(--muted);
+  font-weight:700;
+}
+
+body{
+  gap:8px;
+}
+
+hr{
+  border:0;
+  border-top:1px solid var(--border);
+  margin:18px 0;
+}
+
+code, pre{
+  font-family: var(--mono);
+}
+
+body{
+  position:relative;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background: linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity:.12;
+}
+
+/* Estilo para las líneas de resultados (texto suelto) */
+body{
+  line-height:1.55;
+}
+
+body > br{
+  display:block;
+}
+
+/* “Tarjeta” general para separar visualmente secciones */
+h2 + *{
+  display:block;
+  padding:10px 12px;
+  margin:0 0 6px;
+  background: rgba(17,26,52,.72);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Último mensaje */
+h2:last-of-type{
+  color: rgba(46,229,157,.9);
+}

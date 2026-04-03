@@ -1,0 +1,75 @@
+/* Orden_de_Precedencia.css */
+:root{
+  --bg:#0b1020;
+  --panel:#111a34;
+  --text:#e8ecff;
+  --muted:#b5bedf;
+  --accent:#7c5cff;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 16px 44px rgba(0,0,0,.35);
+  --radius:14px;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background: radial-gradient(1000px 560px at 25% 0%, rgba(124,92,255,.28), transparent 60%),
+              linear-gradient(180deg, #070a14, var(--bg));
+  color:var(--text);
+  padding:28px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+body > *{ width:min(820px, 100%); }
+
+h1,h2{ margin:0; }
+
+
+body{
+  line-height:1.65;
+  gap:14px;
+}
+
+body::before{
+  content:"Orden de precedencia";
+  display:block;
+  width:min(820px, 100%);
+  font-size: 14px;
+  color: rgba(181,190,223,.85);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+body{
+  position:relative;
+}
+
+body{
+  padding-top: 34px;
+}
+
+
+
+body > *{
+  display:block;
+}
+
+body > *:not(script){
+  padding:14px 16px;
+  background: rgba(17,26,52,.72);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: var(--mono);
+}
+
+/* Ajustar el <br> */
+br{ line-height:1.2; }
